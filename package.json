@@ -6,7 +6,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "npm run dev",
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
