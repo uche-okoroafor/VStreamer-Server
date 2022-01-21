@@ -34,6 +34,7 @@ const io = socketio(server, {
 
 io.on('connection', socket => {
   console.log('connected')
+  console.log('working server')
 })
 
 if (process.env.NODE_ENV === 'development') {
