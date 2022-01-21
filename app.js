@@ -35,6 +35,7 @@ const io = socketio(server, {
 io.on('connection', socket => {
   console.log('connected')
 })
+app.use(cors())
 
 if (process.env.NODE_ENV === 'development') {
   app.use(logger('dev'))
