@@ -59,9 +59,6 @@ app.use('/comment', commentRouter)
 app.use('/views', viewerRouter)
 app.use('/follow', followRouter)
 app.use('/about', aboutRouter)
-app.use('/check', (req, res) => {
-  res.json({ say: 'hello world' })
-})
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/client/build')))
 
@@ -85,16 +82,3 @@ process.on('unhandledRejection', (err, promise) => {
 })
 
 module.exports = { app, server }
-
-// const app = express()
-// const port = process.env.PORT || 3000
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
-// app.get('/check', (req, res) => {
-//   res.send('work in progress')
-// })
-// app.listen(port, () => {
-//   console.log(`App listening at http://localhost:${port}`)
-// })
