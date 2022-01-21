@@ -92,7 +92,9 @@ const port = process.env.PORT || 3000
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-
+app.get('/check', (req, res) => {
+  res.send('work in progress')
+})
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
